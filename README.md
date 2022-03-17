@@ -1,2 +1,2 @@
 # Team-Tyler-back-
-This is the backend for Team ${name}
+This is the backend for Team Tyler
