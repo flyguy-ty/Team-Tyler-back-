@@ -3,23 +3,36 @@ package com.controller;
 
 import com.model.Name;
 import com.model.Author;
+import com.model.Review;
+import com.service.MovieService;
+import com.service.ReviewService;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServlet;
+import java.util.List;
+
 @RestController
+@AllArgsConstructor
+@NoArgsConstructor
 public class  Controller {
-//    @Autowired
-//    UserService userService;
-
-    @GetMapping("/")
-    public String register(){
-        System.out.println("requesting");
-        Author author = new Author();
-//        Movie movie = new Movie();
-//        Review review = new Review();
-        Name name = new Name();
+    @Autowired
+    MovieService movieService;
+    @Autowired
+    ReviewService reviewService;
+    @Autowired
 
 
-        return author.toString();
+    // getting reviews by movie id
+    @GetMapping("/reviews")
+    public List<Review> register(@RequestParam("id") int id){
+        Review review = new Review();
+        return movieService.findAllReviews(id);
     }
+
+
 
 }
