@@ -130,7 +130,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="origin/walterBE" />
                       </list>
                     </value>
                   </entry>
