@@ -15,10 +15,10 @@ public class AuthorService {
         this.authorRepository = authorRepository;
     }
 
-    public List<Author> findAllUsers(){
-        return authorRepository.findAll();
+    public Author findById(int author){
+        return authorRepository.findById(author);
     }
-    public Author saveUser(Author author){
+    public Author saveAuthor(Author author){
         return authorRepository.save(author);
     }
 }

@@ -1,12 +1,14 @@
 package com.model;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
 @Table
 @Data
+@ToString
 public class Review {
 
     @Id

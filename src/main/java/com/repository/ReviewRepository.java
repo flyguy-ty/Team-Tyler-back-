@@ -8,4 +8,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 public interface ReviewRepository extends JpaRepository<Review, Integer> {
+
+    Review save(Review review);
 }

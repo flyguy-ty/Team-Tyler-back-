@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Team-Tyler-back-" />
         <module name="P2" />
         <module name="backend" />
       </profile>
@@ -14,6 +15,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="P2" options="-parameters" />
+      <module name="Team-Tyler-back-" options="-parameters" />
       <module name="backend" options="-parameters" />
     </option>
   </component>
