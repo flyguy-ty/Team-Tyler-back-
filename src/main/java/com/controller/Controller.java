@@ -32,7 +32,21 @@ public class  Controller {
     public List<Review> getReviews(@RequestParam("id") int id){
         return movieService.findAllReviews(id);
     }
+    @PostMapping("/signUp")
+    public Author register(@RequestParam("firstName") String fistName,@RequestParam("lastName")
+                           String lastName, @RequestParam("userName") String userName,
+                           @RequestParam("passWord") String passWord){
+        Author author = new Author();
+        Name name = new Name();
+        name.setFirstName(fistName);
+        name.setLastName(lastName);
+        author.setName(name);
+        author.setPassWord(passWord);
+        author.setUserName(userName);
 
+        authorService.saveAuthor(author);
+        return author;
+    }
 
     @PutMapping("/postReview")
     public List<Review> postReview(@RequestParam("authorId") int authorId, @RequestParam("comment") String comment, @RequestParam("rating") double rating,
