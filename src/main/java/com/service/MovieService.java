@@ -21,12 +21,7 @@ public class MovieService {
     }
 
     public List<Review> findAllReviews(int id){
-        try{
-            reviews = movieRepository.findById(id).getReviews();
-        }catch (NullPointerException n){
-
-        }
-        return reviews;
+        return movieRepository.findById(id).getReviews();
     }
     public Movie saveMovie(Movie movie){
         return movieRepository.save(movie);
