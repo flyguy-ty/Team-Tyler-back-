@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91dee294-bd3f-4445-abaf-3e7e32451214" name="Changes" comment="" />
+    <list default="true" id="91dee294-bd3f-4445-abaf-3e7e32451214" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/model/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/model/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/model/Name.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/Name.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/AuthorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/repository/AuthorRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/service/AuthorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/AuthorService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Team-Tyler-front-" />
   </component>
   <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -99,7 +111,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="91dee294-bd3f-4445-abaf-3e7e32451214" name="Changes" comment="" />
+      <changelist id="40a7cabc-9ca9-4dc5-b0bf-7795b41b09d7" name="Changes" comment="" />
       <created>1647568890585</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -118,7 +130,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/walterBE" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -137,15 +149,6 @@
           <properties class="org.hibernate.tool.schema.spi.CommandAcceptanceException" package="org.hibernate.tool.schema.spi" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="antlr.NoViableAltException" package="antlr" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/service/MovieService.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

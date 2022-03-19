@@ -41,7 +41,7 @@ public class  Controller {
         name.setFirstName(fistName);
         name.setLastName(lastName);
         author.setName(name);
-        author.setPassWord(passWord);
+        author.setPassWord(passWord.hashCode());
         author.setUserName(userName);
 
         authorService.saveAuthor(author);
