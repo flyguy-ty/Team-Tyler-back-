@@ -14,5 +14,5 @@ import java.util.List;
 public interface MovieRepository extends JpaRepository<Movie,Integer> {
 
     @Query("from Movie where id = :id")
-    List<Review> findAllReviews(int id);
+    Movie findById(int id);
 }

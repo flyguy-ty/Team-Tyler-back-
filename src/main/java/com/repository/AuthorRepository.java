@@ -10,16 +10,8 @@ import java.util.List;
 @Transactional
 public interface AuthorRepository extends JpaRepository<Author,Integer> {
 
-    // finding all customers
-    @Query("from Author")
-    List<Author> findAll();
+    @Query("from Author where id = :id")
+    Author findById(int id);
 
-    // save a customer
     Author save(Author author);
-
-
-
-
-
-
 }
