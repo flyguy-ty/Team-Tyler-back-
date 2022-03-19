@@ -17,7 +17,7 @@ public class Author {
     @Column
     private String userName;
     @Column
-    private String passWord;
+    private int passWord;
 
     @OneToMany(mappedBy = "author")
     private List<Review> reviews;
