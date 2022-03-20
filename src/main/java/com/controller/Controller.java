@@ -88,19 +88,27 @@ public class  Controller {
         return authorReviews;
     }
     @PostMapping("/removeReview")
-    public  boolean removeReview(@RequestParam("reviewId") int reviewId,@RequestParam("authorId") int authorId){
+    public  List<Review> removeReview(@RequestParam("reviewId") int reviewId,@RequestParam("authorId") int authorId){
         Author author = authorService.findById(authorId);
-        boolean valid = false;
+        Author author1 = new Author();
+        author1.setId(author.getId());
+        author1.setName(author.getName());
+        author1.setUserName(author.getUserName());
+        author1.setPassWord(author.getPassWord());
+        List<Review> reviews= new ArrayList<>();
+        author1.setReviews(reviews);
         for (Review r: author.getReviews()){
             if (r.getId() == reviewId){
-                reviewService.deleteReview(reviewService.findById(reviewId));
-                valid = true;
-                return valid;
+                reviewService.deleteReview(reviewId);
+                System.out.println(author1.getReviews());
+                return author1.getReviews();
             }else {
-
+                reviews.add(r);
             }
         }
-        return valid;
+        authorService.saveAuthor(author1);
+
+        return author1.getReviews();
     }
 
 }
