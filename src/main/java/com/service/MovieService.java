@@ -14,7 +14,6 @@ import java.util.List;
 @Component
 public class MovieService {
     MovieRepository movieRepository;
-    List<Review> reviews = new ArrayList<>();
 
     public MovieService(MovieRepository movieRepository){
         this.movieRepository = movieRepository;
@@ -25,5 +24,8 @@ public class MovieService {
     }
     public Movie saveMovie(Movie movie){
         return movieRepository.save(movie);
+    }
+    public Movie findById(int id){
+        return movieRepository.findById(id);
     }
 }

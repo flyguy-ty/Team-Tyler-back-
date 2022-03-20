@@ -11,9 +11,12 @@ import com.service.ReviewService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -84,7 +87,20 @@ public class  Controller {
         }
         return authorReviews;
     }
+    @PostMapping("/removeReview")
+    public  boolean removeReview(@RequestParam("reviewId") int reviewId,@RequestParam("authorId") int authorId){
+        Author author = authorService.findById(authorId);
+        boolean valid = false;
+        for (Review r: author.getReviews()){
+            if (r.getId() == reviewId){
+                reviewService.deleteReview(reviewService.findById(reviewId));
+                valid = true;
+                return valid;
+            }else {
 
-
+            }
+        }
+        return valid;
+    }
 
 }
