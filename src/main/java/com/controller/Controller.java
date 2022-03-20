@@ -11,9 +11,12 @@ import com.service.ReviewService;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -32,7 +35,21 @@ public class  Controller {
     public List<Review> getReviews(@RequestParam("id") int id){
         return movieService.findAllReviews(id);
     }
+    @PostMapping("/signUp")
+    public Author register(@RequestParam("firstName") String fistName,@RequestParam("lastName")
+                           String lastName, @RequestParam("userName") String userName,
+                           @RequestParam("passWord") String passWord){
+        Author author = new Author();
+        Name name = new Name();
+        name.setFirstName(fistName);
+        name.setLastName(lastName);
+        author.setName(name);
+        author.setPassWord(passWord.hashCode());
+        author.setUserName(userName);
 
+        authorService.saveAuthor(author);
+        return author;
+    }
 
     @PutMapping("/postReview")
     public List<Review> postReview(@RequestParam("authorId") int authorId, @RequestParam("comment") String comment, @RequestParam("rating") double rating,
@@ -70,7 +87,28 @@ public class  Controller {
         }
         return authorReviews;
     }
+    @PostMapping("/removeReview")
+    public  List<Review> removeReview(@RequestParam("reviewId") int reviewId,@RequestParam("authorId") int authorId){
+        Author author = authorService.findById(authorId);
+        Author author1 = new Author();
+        author1.setId(author.getId());
+        author1.setName(author.getName());
+        author1.setUserName(author.getUserName());
+        author1.setPassWord(author.getPassWord());
+        List<Review> reviews= new ArrayList<>();
+        author1.setReviews(reviews);
+        for (Review r: author.getReviews()){
+            if (r.getId() == reviewId){
+                reviewService.deleteReview(reviewId);
+                System.out.println(author1.getReviews());
+                return author1.getReviews();
+            }else {
+                reviews.add(r);
+            }
+        }
+        authorService.saveAuthor(author1);
 
-
+        return author1.getReviews();
+    }
 
 }

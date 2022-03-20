@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91dee294-bd3f-4445-abaf-3e7e32451214" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/AuthorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/MovieRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/MovieRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/repository/ReviewRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/AuthorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/MovieService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/ReviewService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/model/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/Author.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/model/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/model/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/Review.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/AuthorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/repository/AuthorRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/MovieRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/repository/MovieRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/ReviewRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/repository/ReviewRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/AuthorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/AuthorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/MovieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/MovieService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/ReviewService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/ReviewService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +22,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -65,7 +51,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="26XTMoTI0qhc1egbwANjgtOcF0i" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -142,7 +130,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/walterBE" />
+                        <option value="walterBE" />
                       </list>
                     </value>
                   </entry>
@@ -161,15 +149,6 @@
           <properties class="org.hibernate.tool.schema.spi.CommandAcceptanceException" package="org.hibernate.tool.schema.spi" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="antlr.NoViableAltException" package="antlr" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/service/MovieService.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

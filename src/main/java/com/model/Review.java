@@ -1,14 +1,23 @@
 package com.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
 
 @Entity
 @Table
-@Data
-@ToString
+@Getter
+@Setter
+@JsonIdentityInfo(
+        //this is to stop recursive hibernate joins
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id"
+)
 public class Review {
 
     @Id
@@ -24,7 +33,16 @@ public class Review {
     @ManyToOne
     private Author author;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private Movie movie;
 
+    @Override
+    public String toString() {
+        return "Review{" +
+                "id=" + id +
+                ", rating=" + rating +
+                ", comment='" + comment + '\'' +
+                ", author=" + author.getUserName() +
+                ", movie="+ movie.getId()+'}';
+    }
 }

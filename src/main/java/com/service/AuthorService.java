@@ -15,8 +15,9 @@ public class AuthorService {
         this.authorRepository = authorRepository;
     }
 
-    public Author findById(int author){
-        return authorRepository.findById(author);
+    public Author findById(int id){
+        Author author = authorRepository.findById(id);
+        return author;
     }
     public Author saveAuthor(Author author){
         return authorRepository.save(author);

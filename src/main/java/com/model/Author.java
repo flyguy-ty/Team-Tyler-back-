@@ -1,6 +1,8 @@
 package com.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
@@ -12,8 +14,8 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
 @Table
-@Data
-@ToString
+@Getter
+@Setter
 @JsonIdentityInfo(
         //this is to stop recursive hibernate joins
         generator = ObjectIdGenerators.PropertyGenerator.class,
@@ -28,11 +30,10 @@ public class Author {
     @Column(unique = true)
     private String userName;
     @Column
-    private String passWord;
+    private int passWord;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author",fetch = FetchType.EAGER)
     @ToString.Exclude
     private List<Review> reviews = new ArrayList<>();
-
 
 }

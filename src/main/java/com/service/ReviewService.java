@@ -14,4 +14,10 @@ public class ReviewService {
     public Review saveReview(Review review){
         return reviewRepository.save(review);
     }
+    public void deleteReview(int id){
+        reviewRepository.deleteById(id);
+    }
+    public Review findById(int id){
+        return reviewRepository.findById(id);
+    }
 }

@@ -14,21 +14,18 @@ import java.util.List;
 @Component
 public class MovieService {
     MovieRepository movieRepository;
-    List<Review> reviews = new ArrayList<>();
 
     public MovieService(MovieRepository movieRepository){
         this.movieRepository = movieRepository;
     }
 
     public List<Review> findAllReviews(int id){
-        try{
-            reviews = movieRepository.findById(id).getReviews();
-        }catch (NullPointerException n){
-
-        }
-        return reviews;
+        return movieRepository.findById(id).getReviews();
     }
     public Movie saveMovie(Movie movie){
         return movieRepository.save(movie);
+    }
+    public Movie findById(int id){
+        return movieRepository.findById(id);
     }
 }
